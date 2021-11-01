@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> 
+    <title>Sticky notes</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="title_wrapper">
+                <i class="fas fa-sticky-note fa-2x"></i>
+                <h1>Sticky Note</h1>
+            </div>
+            <button type="button" id="add_button">Ajouter</button>
+        </header>
+        <main id="notes_wrapper">
+            <!-- <div class="note_card">
+                <button type="button" class="trash_button">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <p>nottortoe</p>
+            </div>
+            <div class="note_card">
+                <button type="button" class="trash_button">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <p>nottortoe</p>
+            </div> -->
+        </main>
+        <div class="add_note_modal">
+            <div class="modal_card">
+                <span class="add_note_buttons">
+                    <button type="button" class="modal_buttons" id="close_button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button type="button" class="modal_buttons" id="check_button">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </span>
+                <label for="note_input" class="sr-only">Ajouter une nouvelle note</label>
+                <textarea id="note_input" cols="40" rows="12"></textarea>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

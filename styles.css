@@ -1,0 +1,178 @@
+
+body {
+    box-sizing: content-box;
+    background-color: #D9B38D;
+    overflow-x: hidden;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.wrapper {
+    
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    padding-left: 2rem;
+}
+
+#add_button {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #585858;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #585858;
+    transition: background 100ms ease-in, color 100ms ease-in;
+}
+
+#add_button:hover {
+    background-color: #247947;
+    color: white;
+    border-color: #247947;
+}
+
+.add_note_modal {
+    opacity: 0;
+    z-index: -10;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.5);
+    transition: opacity 200ms ease-in-out, z-index 200ms ease-in-out;
+}
+
+.add_overflow {
+    overflow-y: hidden;
+}
+
+.display_modal {
+    display: block;
+    z-index:10;
+    opacity: 1;
+}
+
+
+.modal_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;     
+    position: absolute;
+    z-index: 10;
+    right: 50%;
+    transform: translate(50%, 50%)                                                                                                                  
+}
+
+.add_note_buttons {
+    padding: 0.5rem 0.5rem 0 0;
+    align-self: flex-end;
+}
+
+
+
+.modal_buttons {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #919191;
+    color: #919191;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: color 300ms ease-in-out;
+}
+
+.modal_buttons:hover {
+    background-color: #919191;
+    color: white;
+}
+
+#note_input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    font-family: 'Architects Daughter', cursive;
+}
+
+
+#notes_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.note_card {
+    width: 250px;
+    height: 250px;
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    transform-origin: top left;
+    box-shadow: 5px 5px 12px -2px rgba(0,0,0,0.71);
+    transform-origin: top left;
+    display: flex;
+    align-items: flex-start;
+    overflow-wrap: anywhere;
+}
+
+p {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.trash_button {
+    border: none;
+    cursor: pointer;
+    color: #3f3c3c;
+    outline: none;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 100px) and (max-width: 768px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        padding-left: 1rem;
+    }
+
+    #add_button {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .modal_card {
+        width: 95vw;
+        height: 200px;
+        transform: translateX(50%, 50%)
+    }
+
+    #note_input {
+        width: 90%
+    }
+}
